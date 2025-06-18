@@ -82,12 +82,19 @@ body {
 }
 
 .language-select {
+    width: 200px;
+    margin: 0 auto;
     padding: 0.5rem;
     font-size: 1.2rem;
     font-family: 'MedievalSharp', cursive;
     border: 2px solid #d4af37;
     background-color: #74531d;
     color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: 24px 16px, 24px 16px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .language-select option {
