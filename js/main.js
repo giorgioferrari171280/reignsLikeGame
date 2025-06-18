@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('splash-overlay');
   const progressBar = document.getElementById('progress-bar');
   const languageSelect = document.getElementById('language-select');
+  const flagButtons = document.querySelectorAll('.language-flag');
   const newGameBtn = document.getElementById('new-game-button');
   const loadGameBtn = document.getElementById('load-game-button');
   const optionsBtn = document.getElementById('options-button');
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hall: 'HALL OF FAME',
       credits: 'CREDITS',
       exit: 'ESCI DAL GIOCO',
-      languages: { it: 'ITALIANO', en: 'INGLESE' }
+      languages: { it: 'ITALIANO', en: 'INGLESE', fr: 'FRANCESE', de: 'TEDESCO', es: 'SPAGNOLO', pt: 'PORTOGHESE' }
     },
     en: {
       audioOn: 'Audio ON',
@@ -38,7 +39,55 @@ document.addEventListener('DOMContentLoaded', () => {
       hall: 'HALL OF FAME',
       credits: 'CREDITS',
       exit: 'QUIT GAME',
-      languages: { it: 'ITALIAN', en: 'ENGLISH' }
+      languages: { it: 'ITALIAN', en: 'ENGLISH', fr: 'FRENCH', de: 'GERMAN', es: 'SPANISH', pt: 'PORTUGUESE' }
+    },
+    fr: {
+      audioOn: 'Audio ON',
+      audioOff: 'Audio OFF',
+      play: 'JOUER',
+      newGame: 'NOUVELLE PARTIE',
+      loadGame: 'CHARGER PARTIE',
+      options: 'OPTIONS',
+      hall: 'HALL OF FAME',
+      credits: 'CRÉDITS',
+      exit: 'QUITTER LE JEU',
+      languages: { it: 'ITALIEN', en: 'ANGLAIS', fr: 'FRANÇAIS', de: 'ALLEMAND', es: 'ESPAGNOL', pt: 'PORTUGAIS' }
+    },
+    de: {
+      audioOn: 'Audio AN',
+      audioOff: 'Audio AUS',
+      play: 'SPIELEN',
+      newGame: 'NEUES SPIEL',
+      loadGame: 'SPIEL LADEN',
+      options: 'OPTIONEN',
+      hall: 'RUHMESHALLE',
+      credits: 'CREDITS',
+      exit: 'SPIEL BEENDEN',
+      languages: { it: 'ITALIENISCH', en: 'ENGLISCH', fr: 'FRANZÖSISCH', de: 'DEUTSCH', es: 'SPANISCH', pt: 'PORTUGIESISCH' }
+    },
+    es: {
+      audioOn: 'Audio ON',
+      audioOff: 'Audio OFF',
+      play: 'JUGAR',
+      newGame: 'NUEVA PARTIDA',
+      loadGame: 'CARGAR PARTIDA',
+      options: 'OPCIONES',
+      hall: 'SALA DE LA FAMA',
+      credits: 'CRÉDITOS',
+      exit: 'SALIR DEL JUEGO',
+      languages: { it: 'ITALIANO', en: 'INGLÉS', fr: 'FRANCÉS', de: 'ALEMÁN', es: 'ESPAÑOL', pt: 'PORTUGUÊS' }
+    },
+    pt: {
+      audioOn: 'Audio ON',
+      audioOff: 'Audio OFF',
+      play: 'JOGAR',
+      newGame: 'NOVO JOGO',
+      loadGame: 'CARREGAR JOGO',
+      options: 'OPÇÕES',
+      hall: 'HALL DA FAMA',
+      credits: 'CRÉDITOS',
+      exit: 'SAIR DO JOGO',
+      languages: { it: 'ITALIANO', en: 'INGLÊS', fr: 'FRANCÊS', de: 'ALEMÃO', es: 'ESPANHOL', pt: 'PORTUGUÊS' }
     }
   };
 
@@ -65,11 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
     exitBtn.textContent = t.exit;
     languageSelect.options[0].textContent = t.languages.it;
     languageSelect.options[1].textContent = t.languages.en;
+    languageSelect.options[2].textContent = t.languages.fr;
+    languageSelect.options[3].textContent = t.languages.de;
+    languageSelect.options[4].textContent = t.languages.es;
+    languageSelect.options[5].textContent = t.languages.pt;
     updateAudioLabel();
   }
 
   audioToggle.addEventListener('change', updateVolumeState);
   languageSelect.addEventListener('change', (e) => updateTexts(e.target.value));
+
+  flagButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      languageSelect.value = lang;
+      updateTexts(lang);
+    });
+  });
 
   playBtn.addEventListener('click', () => {
     overlay.classList.add('visible');
