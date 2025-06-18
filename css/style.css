@@ -90,6 +90,33 @@ body {
     color: #ffffff;
 }
 
+.language-select option {
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: 24px 16px, 24px 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.lang-option-it { background-image: url('../assets/ui/italiaFlag.svg'), url('../assets/ui/italiaFlag.svg'); }
+.lang-option-en { background-image: url('../assets/ui/usaFlag.svg'), url('../assets/ui/usaFlag.svg'); }
+.lang-option-fr { background-image: url('../assets/ui/franciaFlag.svg'), url('../assets/ui/franciaFlag.svg'); }
+.lang-option-de { background-image: url('../assets/ui/germaniaFlag.svg'), url('../assets/ui/germaniaFlag.svg'); }
+.lang-option-es { background-image: url('../assets/ui/spagnaFlag.svg'), url('../assets/ui/spagnaFlag.svg'); }
+.lang-option-pt { background-image: url('../assets/ui/portogalloFlag.svg'), url('../assets/ui/portogalloFlag.svg'); }
+.lang-option-ar { background-image: url('../assets/ui/arabiaFlag.svg'), url('../assets/ui/arabiaFlag.svg'); }
+.lang-option-ru { background-image: url('../assets/ui/russiaFlag.svg'), url('../assets/ui/russiaFlag.svg'); }
+.lang-option-zh { background-image: url('../assets/ui/cinaFlag.svg'), url('../assets/ui/cinaFlag.svg'); }
+.lang-option-ja { background-image: url('../assets/ui/giapponeFlag.svg'), url('../assets/ui/giapponeFlag.svg'); }
+
+.language-warning {
+    color: #fff;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
 /* Splash overlay */
 #splash-overlay {
     position: fixed;
