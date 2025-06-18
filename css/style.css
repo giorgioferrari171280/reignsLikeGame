@@ -104,6 +104,14 @@ body {
     border: 2px solid #d4af37;
     background-color: #74531d;
     color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.language-select:hover {
+    background-color: #b38d48;
+    color: #000;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .language-select option {
@@ -125,6 +133,14 @@ body {
 .lang-option-ru { background-image: url('../assets/ui/russiaFlag.svg'), url('../assets/ui/russiaFlag.svg'); }
 .lang-option-zh { background-image: url('../assets/ui/cinaFlag.svg'), url('../assets/ui/cinaFlag.svg'); }
 .lang-option-ja { background-image: url('../assets/ui/giapponeFlag.svg'), url('../assets/ui/giapponeFlag.svg'); }
+
+.language-prompt {
+    color: #fff;
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 .language-warning {
     color: #fff;
