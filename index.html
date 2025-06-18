@@ -20,18 +20,22 @@
         <input type="range" id="volume-slider" min="0" max="100" value="50">
 
         <!-- Language selector -->
-        <select id="language-select" class="language-select">
-            <option value="it" class="lang-option-it">ITALIANO</option>
-            <option value="en" class="lang-option-en" selected>INGLESE</option>
-            <option value="fr" class="lang-option-fr">FRANCESE</option>
-            <option value="de" class="lang-option-de">TEDESCO</option>
-            <option value="es" class="lang-option-es">SPAGNOLO</option>
-            <option value="pt" class="lang-option-pt">PORTOGHESE</option>
-            <option value="ar" class="lang-option-ar">ARABO</option>
-            <option value="ru" class="lang-option-ru">RUSSO</option>
-            <option value="zh" class="lang-option-zh">CINESE</option>
-            <option value="ja" class="lang-option-ja">GIAPPONESE</option>
-        </select>
+        <div class="language-container">
+            <img id="flag-left" class="language-flag-img" src="assets/ui/usaFlag.svg" alt="Flag">
+            <select id="language-select" class="language-select">
+                <option value="it" class="lang-option-it">ITALIANO</option>
+                <option value="en" class="lang-option-en" selected>INGLESE</option>
+                <option value="fr" class="lang-option-fr">FRANCESE</option>
+                <option value="de" class="lang-option-de">TEDESCO</option>
+                <option value="es" class="lang-option-es">SPAGNOLO</option>
+                <option value="pt" class="lang-option-pt">PORTOGHESE</option>
+                <option value="ar" class="lang-option-ar">ARABO</option>
+                <option value="ru" class="lang-option-ru">RUSSO</option>
+                <option value="zh" class="lang-option-zh">CINESE</option>
+                <option value="ja" class="lang-option-ja">GIAPPONESE</option>
+            </select>
+            <img id="flag-right" class="language-flag-img" src="assets/ui/usaFlag.svg" alt="Flag">
+        </div>
         <p id="language-warning" class="language-warning"></p>
         <button id="play-button" class="menu-button">GIOCA</button>
     </div>

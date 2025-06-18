@@ -167,9 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
     audioLabelText.textContent = audioToggle.checked ? t.audioOn : t.audioOff;
   }
 
+  const flagLeft = document.getElementById('flag-left');
+  const flagRight = document.getElementById('flag-right');
+
   function updateSelectFlag(lang) {
     const flag = flagPaths[lang];
-    languageSelect.style.backgroundImage = `url('${flag}'), url('${flag}')`;
+    flagLeft.src = flag;
+    flagRight.src = flag;
   }
 
   function updateVolumeState() {
