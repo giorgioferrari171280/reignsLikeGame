@@ -67,6 +67,20 @@ body {
     width: 100%;
 }
 
+.language-flags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.language-flag {
+    width: 40px;
+    height: 26px;
+    cursor: pointer;
+    border: 2px solid #d4af37;
+}
+
 .language-select {
     padding: 0.5rem;
     font-size: 1.2rem;
