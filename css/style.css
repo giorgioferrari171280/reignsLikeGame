@@ -94,6 +94,7 @@ body {
     background-repeat: no-repeat;
     background-position: left center, right center;
     background-size: 24px 16px, 24px 16px;
+    text-align: center;
     padding-left: 30px;
     padding-right: 30px;
 }
