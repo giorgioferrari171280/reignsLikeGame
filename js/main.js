@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressBar = document.getElementById('progress-bar');
   const languageSelect = document.getElementById('language-select');
   const flagButtons = document.querySelectorAll('.language-flag');
+  const flagPaths = {
+    it: 'assets/ui/italiaFlag.svg',
+    en: 'assets/ui/usaFlag.svg',
+    fr: 'assets/ui/franciaFlag.svg',
+    de: 'assets/ui/germaniaFlag.svg',
+    es: 'assets/ui/spagnaFlag.svg',
+    pt: 'assets/ui/portogalloFlag.svg',
+    ar: 'assets/ui/arabiaFlag.svg',
+    ru: 'assets/ui/russiaFlag.svg',
+    zh: 'assets/ui/cinaFlag.svg',
+    ja: 'assets/ui/giapponeFlag.svg'
+  };
   const newGameBtn = document.getElementById('new-game-button');
   const loadGameBtn = document.getElementById('load-game-button');
   const optionsBtn = document.getElementById('options-button');
@@ -155,6 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
     audioLabelText.textContent = audioToggle.checked ? t.audioOn : t.audioOff;
   }
 
+  function updateSelectFlag(lang) {
+    const flag = flagPaths[lang];
+    languageSelect.style.backgroundImage = `url('${flag}'), url('${flag}')`;
+  }
+
   function updateVolumeState() {
     volumeSlider.disabled = !audioToggle.checked;
     updateAudioLabel();
@@ -182,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     languageSelect.options[9].textContent = t.languages.ja;
     document.getElementById('language-warning').textContent = t.warning;
     updateAudioLabel();
+    updateSelectFlag(lang);
   }
 
   audioToggle.addEventListener('change', updateVolumeState);
