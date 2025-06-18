@@ -10,13 +10,36 @@
 </head>
 <body>
     <h1 class="title">MEDIEVAL QUEST</h1>
-    <div class="menu-container">
+
+    <!-- Start screen with options -->
+    <div id="start-screen" class="menu-container">
+        <label class="option">
+            <input type="checkbox" id="audio-toggle" checked> Audio ON
+        </label>
+        <input type="range" id="volume-slider" min="0" max="100" value="50">
+        <select id="language-select" class="language-select">
+            <option value="it">ITALIANO</option>
+            <option value="en">INGLESE</option>
+        </select>
+        <button id="play-button" class="menu-button">GIOCA</button>
+    </div>
+
+    <!-- Main menu -->
+    <div id="main-menu" class="menu-container" style="display: none;">
         <button class="menu-button">NUOVA PARTITA</button>
         <button class="menu-button">CARICA PARTITA</button>
         <button class="menu-button">OPZIONI</button>
         <button class="menu-button">HALL OF FAME</button>
         <button class="menu-button">CREDITS</button>
         <a class="menu-button exit-button" href="https://www.google.com">ESCI DAL GIOCO</a>
+    </div>
+
+    <!-- Splash overlay -->
+    <div id="splash-overlay">
+        <img src="images/logo.png" alt="Logo del gioco">
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>
