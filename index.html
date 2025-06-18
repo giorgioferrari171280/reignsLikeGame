@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,22 +18,20 @@
             <span id="audio-label-text">Audio ON</span>
         </label>
         <input type="range" id="volume-slider" min="0" max="100" value="50">
-        <div id="language-flags" class="language-flags">
-            <img src="assets/ui/italiaFlag.svg" class="language-flag" data-lang="it" alt="Italiano">
-            <img src="assets/ui/usaFlag.svg" class="language-flag" data-lang="en" alt="English">
-            <img src="assets/ui/franciaFlag.svg" class="language-flag" data-lang="fr" alt="Français">
-            <img src="assets/ui/germaniaFlag.svg" class="language-flag" data-lang="de" alt="Deutsch">
-            <img src="assets/ui/spagnaFlag.svg" class="language-flag" data-lang="es" alt="Español">
-            <img src="assets/ui/portogalloFlag.svg" class="language-flag" data-lang="pt" alt="Português">
-        </div>
-        <select id="language-select" class="language-select" style="display:none;">
-            <option value="it">ITALIANO</option>
-            <option value="en">INGLESE</option>
-            <option value="fr">FRANCESE</option>
-            <option value="de">TEDESCO</option>
-            <option value="es">SPAGNOLO</option>
-            <option value="pt">PORTOGHESE</option>
+        <!-- Language selector -->
+        <select id="language-select" class="language-select">
+            <option value="it" class="lang-option-it">ITALIANO</option>
+            <option value="en" class="lang-option-en" selected>INGLESE</option>
+            <option value="fr" class="lang-option-fr">FRANCESE</option>
+            <option value="de" class="lang-option-de">TEDESCO</option>
+            <option value="es" class="lang-option-es">SPAGNOLO</option>
+            <option value="pt" class="lang-option-pt">PORTOGHESE</option>
+            <option value="ar" class="lang-option-ar">ARABO</option>
+            <option value="ru" class="lang-option-ru">RUSSO</option>
+            <option value="zh" class="lang-option-zh">CINESE</option>
+            <option value="ja" class="lang-option-ja">GIAPPONESE</option>
         </select>
+        <p id="language-warning" class="language-warning"></p>
         <button id="play-button" class="menu-button">GIOCA</button>
     </div>
 
