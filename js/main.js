@@ -1,3 +1,14 @@
+import it from '../localizations/it.js';
+import en from '../localizations/en.js';
+import fr from '../localizations/fr.js';
+import de from '../localizations/de.js';
+import es from '../localizations/es.js';
+import pt from '../localizations/pt.js';
+import ar from '../localizations/ar.js';
+import ru from '../localizations/ru.js';
+import zh from '../localizations/zh.js';
+import ja from '../localizations/ja.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const audioToggle = document.getElementById('audio-toggle');
   const volumeSlider = document.getElementById('volume-slider');
@@ -28,148 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const creditsBtn = document.getElementById('credits-button');
   const exitBtn = document.getElementById('exit-button');
 
-  const translations = {
-    it: {
-      audioOn: 'Audio ON',
-      audioOff: 'Audio OFF',
-      play: 'GIOCA',
-      newGame: 'NUOVA PARTITA',
-      loadGame: 'CARICA PARTITA',
-      options: 'OPZIONI',
-      hall: 'HALL OF FAME',
-      credits: 'CREDITS',
-      exit: 'ESCI DAL GIOCO',
-      languagePrompt: 'Scegli la lingua di gioco',
-      warning: 'ATTENZIONE! Questo gioco \u00e8 stato creato in italiano. Le traduzioni in altre lingue sono state generate con l\'intelligenza artificiale e possono contenere degli errori. Vi chiedo scusa in anticipo!',
-      languages: { it: 'ITALIANO', en: 'INGLESE', fr: 'FRANCESE', de: 'TEDESCO', es: 'SPAGNOLO', pt: 'PORTOGHESE', ar: 'ARABO', ru: 'RUSSO', zh: 'CINESE', ja: 'GIAPPONESE' }
-    },
-    en: {
-      audioOn: 'Audio ON',
-      audioOff: 'Audio OFF',
-      play: 'PLAY',
-      newGame: 'NEW GAME',
-      loadGame: 'LOAD GAME',
-      options: 'OPTIONS',
-      hall: 'HALL OF FAME',
-      credits: 'CREDITS',
-      exit: 'QUIT GAME',
-      languagePrompt: 'Choose the game language',
-      warning: 'WARNING! This game was originally created in Italian. Translations into other languages were generated with artificial intelligence and may contain errors. I apologize in advance!',
-      languages: { it: 'ITALIAN', en: 'ENGLISH', fr: 'FRENCH', de: 'GERMAN', es: 'SPANISH', pt: 'PORTUGUESE', ar: 'ARABIC', ru: 'RUSSIAN', zh: 'CHINESE', ja: 'JAPANESE' }
-    },
-    fr: {
-      audioOn: 'Audio ON',
-      audioOff: 'Audio OFF',
-      play: 'JOUER',
-      newGame: 'NOUVELLE PARTIE',
-      loadGame: 'CHARGER PARTIE',
-      options: 'OPTIONS',
-      hall: 'HALL OF FAME',
-      credits: 'CRÉDITS',
-      exit: 'QUITTER LE JEU',
-      languagePrompt: 'Choisissez la langue du jeu',
-      warning: "ATTENTION ! Ce jeu a été créé en italien. Les traductions dans d'autres langues ont été générées par intelligence artificielle et peuvent contenir des erreurs. Je vous prie de m'excuser par avance !",
-      languages: { it: 'ITALIEN', en: 'ANGLAIS', fr: 'FRANÇAIS', de: 'ALLEMAND', es: 'ESPAGNOL', pt: 'PORTUGAIS', ar: 'ARABE', ru: 'RUSSE', zh: 'CHINOIS', ja: 'JAPONAIS' }
-    },
-    de: {
-      audioOn: 'Audio AN',
-      audioOff: 'Audio AUS',
-      play: 'SPIELEN',
-      newGame: 'NEUES SPIEL',
-      loadGame: 'SPIEL LADEN',
-      options: 'OPTIONEN',
-      hall: 'RUHMESHALLE',
-      credits: 'CREDITS',
-      exit: 'SPIEL BEENDEN',
-      languagePrompt: 'Wähle die Spielsprache',
-      warning: 'ACHTUNG! Dieses Spiel wurde auf Italienisch erstellt. Die Übersetzungen in andere Sprachen wurden mit künstlicher Intelligenz erstellt und können Fehler enthalten. Ich entschuldige mich im Voraus!',
-      languages: { it: 'ITALIENISCH', en: 'ENGLISCH', fr: 'FRANZÖSISCH', de: 'DEUTSCH', es: 'SPANISCH', pt: 'PORTUGIESISCH', ar: 'ARABISCH', ru: 'RUSSISCH', zh: 'CHINESISCH', ja: 'JAPANISCH' }
-    },
-    es: {
-      audioOn: 'Audio ON',
-      audioOff: 'Audio OFF',
-      play: 'JUGAR',
-      newGame: 'NUEVA PARTIDA',
-      loadGame: 'CARGAR PARTIDA',
-      options: 'OPCIONES',
-      hall: 'SALA DE LA FAMA',
-      credits: 'CRÉDITOS',
-      exit: 'SALIR DEL JUEGO',
-      languagePrompt: 'Elige el idioma del juego',
-      warning: '¡ATENCIÓN! Este juego se ha creado en italiano. Las traducciones a otros idiomas se generaron con inteligencia artificial y pueden contener errores. ¡Les pido disculpas de antemano!',
-      languages: { it: 'ITALIANO', en: 'INGLÉS', fr: 'FRANCÉS', de: 'ALEMÁN', es: 'ESPAÑOL', pt: 'PORTUGUÊS', ar: 'ÁRABE', ru: 'RUSO', zh: 'CHINO', ja: 'JAPONÉS' }
-    },
-    pt: {
-      audioOn: 'Audio ON',
-      audioOff: 'Audio OFF',
-      play: 'JOGAR',
-      newGame: 'NOVO JOGO',
-      loadGame: 'CARREGAR JOGO',
-      options: 'OPÇÕES',
-      hall: 'HALL DA FAMA',
-      credits: 'CRÉDITOS',
-      exit: 'SAIR DO JOGO',
-      languagePrompt: 'Escolha o idioma do jogo',
-      warning: 'ATENÇÃO! Este jogo foi criado em italiano. As traduções para outros idiomas foram geradas por inteligência artificial e podem conter erros. Peço desculpas antecipadamente!',
-      languages: { it: 'ITALIANO', en: 'INGLÊS', fr: 'FRANCÊS', de: 'ALEMÃO', es: 'ESPANHOL', pt: 'PORTUGUÊS', ar: 'ÁRABE', ru: 'RUSSO', zh: 'CHINÊS', ja: 'JAPONÊS' }
-    },
-    ar: {
-      audioOn: 'الصوت يعمل',
-      audioOff: 'الصوت متوقف',
-      play: 'ابدأ',
-      newGame: 'لعبة جديدة',
-      loadGame: 'تحميل لعبة',
-      options: 'الإعدادات',
-      hall: 'قاعة الشهرة',
-      credits: 'الشكر والتقدير',
-      exit: 'الخروج من اللعبة',
-      languagePrompt: 'اختر لغة اللعبة',
-      warning: 'تحذير! تم إنشاء هذه اللعبة باللغة الإيطالية. تمت ترجمة اللغات الأخرى باستخدام الذكاء الاصطناعي وقد تحتوي على أخطاء. أعتذر مسبقًا!',
-      languages: { it: 'الإيطالية', en: 'الإنجليزية', fr: 'الفرنسية', de: 'الألمانية', es: 'الإسبانية', pt: 'البرتغالية', ar: 'العربية', ru: 'الروسية', zh: 'الصينية', ja: 'اليابانية' }
-    },
-    ru: {
-      audioOn: 'Звук ВКЛ',
-      audioOff: 'Звук ВЫКЛ',
-      play: 'ИГРАТЬ',
-      newGame: 'НОВАЯ ИГРА',
-      loadGame: 'ЗАГРУЗИТЬ',
-      options: 'НАСТРОЙКИ',
-      hall: 'ЗАЛ СЛАВЫ',
-      credits: 'БЛАГОДАРНОСТИ',
-      exit: 'ВЫХОД',
-      languagePrompt: 'Выберите язык игры',
-      warning: 'ВНИМАНИЕ! Эта игра была создана на итальянском языке. Переводы на другие языки были сгенерированы искусственным интеллектом и могут содержать ошибки. Заранее прошу прощения!',
-      languages: { it: 'Итальянский', en: 'Английский', fr: 'Французский', de: 'Немецкий', es: 'Испанский', pt: 'Португальский', ar: 'Арабский', ru: 'Русский', zh: 'Китайский', ja: 'Японский' }
-    },
-    zh: {
-      audioOn: '声音开启',
-      audioOff: '声音关闭',
-      play: '开始',
-      newGame: '新游戏',
-      loadGame: '加载游戏',
-      options: '选项',
-      hall: '名人堂',
-      credits: '致谢',
-      exit: '退出游戏',
-      languagePrompt: '选择游戏语言',
-      warning: '注意！这款游戏原本以意大利语制作。其他语言的翻译由人工智能生成，可能包含错误。提前向您致歉！',
-      languages: { it: '意大利语', en: '英语', fr: '法语', de: '德语', es: '西班牙语', pt: '葡萄牙语', ar: '阿拉伯语', ru: '俄语', zh: '中文', ja: '日语' }
-    },
-    ja: {
-      audioOn: '音声オン',
-      audioOff: '音声オフ',
-      play: 'プレイ',
-      newGame: '新しいゲーム',
-      loadGame: 'ゲームをロード',
-      options: 'オプション',
-      hall: '殿堂',
-      credits: 'クレジット',
-      exit: 'ゲーム終了',
-      languagePrompt: 'ゲームの言語を選択してください',
-      warning: '注意！このゲームはイタリア語で作成されています。他の言語への翻訳はAIで生成されており、誤りが含まれている可能性があります。あらかじめご了承ください。',
-      languages: { it: 'イタリア語', en: '英語', fr: 'フランス語', de: 'ドイツ語', es: 'スペイン語', pt: 'ポルトガル語', ar: 'アラビア語', ru: 'ロシア語', zh: '中国語', ja: '日本語' }
-    }
-  };
+  const translations = { it, en, fr, de, es, pt, ar, ru, zh, ja };
 
   function updateAudioLabel() {
     const lang = languageSelect.value;
